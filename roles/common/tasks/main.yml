@@ -1,0 +1,9 @@
+---
+- name: Copy the perfsonar repository definition
+  copy: src=perfSONAR-repo-0.9-1.noarch.rpm dest=/tmp/perfSONAR-repo-0.9-1.noarch.rpm mode=0755
+
+- name: Install EPEL RPM
+  yum: name=epel-release state=present
+
+- name: Install perfonsar repo
+  yum: name=/tmp/perfSONAR-repo-0.9-1.noarch.rpm state=present

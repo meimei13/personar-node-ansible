@@ -1,0 +1,10 @@
+---
+- name: Install the Perfsonar Node Tests
+  hosts: perfsonar-nodes
+  remote_user: root
+  # remote_user: user
+  # sudo: yes
+
+  roles:
+    - common
+    - perfsonar

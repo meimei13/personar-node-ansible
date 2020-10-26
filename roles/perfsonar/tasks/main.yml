@@ -1,0 +1,9 @@
+---
+- name: Install perfsonar testpoint
+  yum: name=perfsonar-testpoint state=present
+
+- name: pscheduler state
+  service: name=pscheduler-scheduler state=started enabled=yes
+
+- name: pregistration daemeon state
+  service: name=perfsonar-lsregistrationdaemon state=started enabled=yes
